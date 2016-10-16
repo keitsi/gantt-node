@@ -1,3 +1,10 @@
+# ganttnote
+* In order to learning android program developing I was trying to develop a note book base on gantt chart.
+	* Functions:
+		1. one note is noe task.
+		2. task has attribute: from_time, to_time, end_time, status, content, update history.
+		3. there are three panel home/in progress/finished
+
 pocket-note-android
 ============
 
