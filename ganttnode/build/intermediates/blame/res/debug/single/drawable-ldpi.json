@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-ldpi/ic_add.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-ldpi/ic_add.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-ldpi/ic_launcher.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-ldpi/ic_launcher.png"
+    }
+]

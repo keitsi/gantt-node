@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="universal-image-loader-1.9.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/pocketnoteandroid/libs/universal-image-loader-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ganttnode/libs/universal-image-loader-1.9.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

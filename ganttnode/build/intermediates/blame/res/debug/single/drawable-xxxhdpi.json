@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_android.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_android.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_action_color_pencil.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_action_color_pencil.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_search.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_search.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_user.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_user.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_android_green.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_android_green.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_icon_expired.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_icon_expired.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_settings.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-xxxhdpi/ic_settings.png"
+    }
+]

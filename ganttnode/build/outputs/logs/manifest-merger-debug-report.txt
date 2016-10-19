@@ -1,0 +1,104 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:3:11-48
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:5:11-36
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:4:11-34
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:7:5-43
+MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/AndroidManifest.xml:3:3-70
+MERGED from [com.android.support:support-v4:22.2.0] /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:7:15-41
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+		INJECTED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml
+uses-permission#android.permission.VIBRATE
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:8:22-63
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:10:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:11:5-64
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:11:22-62
+application
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:13:5-39:19
+MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/AndroidManifest.xml:4:3-17
+MERGED from [com.android.support:support-v4:22.2.0] /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:15:13-45
+	android:icon
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:17:13-42
+	android:theme
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:16:13-49
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:14:13-49
+activity#chan.android.app.pocketnote.MainActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:18:9-25:20
+	android:label
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:20:17-49
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:19:17-45
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:22:17-68
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:23:17-76
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:23:27-74
+activity#chan.android.app.pocketnote.app.notes.EditNoteActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:27:9-63
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:27:19-61
+activity#chan.android.app.pocketnote.app.settings.ChangePasswordActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:28:9-72
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:28:19-70
+activity#chan.android.app.pocketnote.app.settings.NewPasswordActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:29:9-69
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:29:19-67
+activity#chan.android.app.pocketnote.app.reminder.ReminderActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:30:9-66
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:30:19-64
+activity#chan.android.app.pocketnote.app.PhotoViewActivity
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:31:9-58
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:31:19-56
+provider#chan.android.app.pocketnote.app.db.NoteContentProvider
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:33:9-36:80
+	android:authorities
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:36:17-78
+	android:multiprocess
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:35:17-44
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:34:17-86
+receiver#chan.android.app.pocketnote.app.reminder.alarm.AlarmReceiver
+ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:38:9-69
+	android:name
+		ADDED from /home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/AndroidManifest.xml:38:19-67
