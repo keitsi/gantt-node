@@ -10,6 +10,7 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.animation.Animation;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import chan.android.app.pocketnote.app.AppPreferences;
+import chan.android.app.pocketnote.app.TabPagerAdapter;
 import chan.android.app.pocketnote.app.calendar.CalendarFragment;
 import chan.android.app.pocketnote.app.notes.ActionListDialogFragment;
 import chan.android.app.pocketnote.app.notes.NotesFragment;
@@ -31,14 +33,17 @@ import chan.android.app.pocketnote.util.view.CircularImageView;
 import chan.android.app.pocketnote.util.view.NavigationDrawerAdapter;
 import chan.android.app.pocketnote.util.view.NavigationDrawerItem;
 import chan.android.app.pocketnote.util.view.NavigationMenuItem;
+
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends SherlockFragmentActivity {
+public class MainActivity extends SherlockFragmentActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
   private static final int INTENT_TAKE_PHOTO = 0;
   private static final int INTENT_CHOOSE_PHOTO = 1;
@@ -50,15 +55,15 @@ public class MainActivity extends SherlockFragmentActivity {
     PHOTO_ACTIONS.add(new ActionListDialogFragment.Item(R.drawable.ic_action_content_picture, "Choose photo"));
   }
 
-  private NavigationDrawerItem[] DRAWER_ITEMS;
-  private DrawerLayout drawerLayout;
-  private LinearLayout drawerContainer;
-  private ListView drawerList;
-  private ActionBarDrawerToggle drawerToggle;
-  private CircularImageView photoImageView;
-  private TextView username;
-  private CharSequence drawerTitle;
-  private CharSequence title;
+//  private NavigationDrawerItem[] DRAWER_ITEMS;
+//  private DrawerLayout drawerLayout;
+//  private LinearLayout drawerContainer;
+//  private ListView drawerList;
+//  private ActionBarDrawerToggle drawerToggle;
+//  private CircularImageView photoImageView;
+//  private TextView username;
+//  private CharSequence drawerTitle;
+//  private CharSequence title;
   private Fragment[] fragments;
   private Uri imageUri;
   private Fragment fragmentNote;
@@ -81,25 +86,68 @@ public class MainActivity extends SherlockFragmentActivity {
     fragmentSettings = SettingsFragment.newInstance();
 
     fragments = new Fragment[4];
-    fragments[0] = fragmentNote;
-    fragments[1] = fragmentCalendar;
+    fragments[0] = fragmentCalendar;
+    fragments[1] = fragmentNote;
     fragments[2] = fragmentTrash;
     fragments[3] = fragmentSettings;
 
-    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-    transaction.add(R.id.content, fragmentNote, NotesFragment.TAG);
-    transaction.add(R.id.content, fragmentTrash, TrashFragment.TAG);
-    transaction.add(R.id.content, fragmentCalendar, CalendarFragment.TAG);
-    transaction.add(R.id.content, fragmentSettings, SettingsFragment.TAG);
+//    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//    transaction.add(R.id.content, fragmentNote, NotesFragment.TAG);
+//    transaction.add(R.id.content, fragmentTrash, TrashFragment.TAG);
+//    transaction.add(R.id.content, fragmentCalendar, CalendarFragment.TAG);
+//    transaction.add(R.id.content, fragmentSettings, SettingsFragment.TAG);
+//
+//    if (savedInstanceState == null) {
+//      transaction.hide(fragmentCalendar);
+//      transaction.hide(fragmentTrash);
+//      transaction.hide(fragmentSettings);
+//      transaction.show(fragmentNote);
+//      fragIndex = 0;
+//    }
+//    transaction.commit();
 
-    if (savedInstanceState == null) {
-      transaction.hide(fragmentCalendar);
-      transaction.hide(fragmentTrash);
-      transaction.hide(fragmentSettings);
-      transaction.show(fragmentNote);
-      fragIndex = 0;
+    //从资源文件在获取Tab的title
+    mTabTitles = getResources().getStringArray(R.array.tab_title);
+    //mFragmentList = new ArrayList<Fragment>();
+
+    mViewPager = (ViewPager) findViewById(R.id.viewPager);
+    //设置Adapter
+    mViewPager.setAdapter(new TabPagerAdapter(getSupportFragmentManager(), new ArrayList<Fragment>(Arrays.asList(fragments)) ));
+    mViewPager.setCurrentItem(1);
+    //设置监听
+    mViewPager.setOnPageChangeListener(this);
+
+
+    //获取Action实例我们使用getSupportActionBar()方法
+    mActionBar = getSupportActionBar();
+
+    //隐藏Title
+    //mActionBar.setDisplayShowTitleEnabled(false);
+    //隐藏Home logo
+    //mActionBar.setDisplayShowHomeEnabled(false);
+    //设置ActionBar的导航模式为Tab
+    mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+
+    //为ActionBar添加Tab并设置TabListener
+    for (int i = 0; i < mTabTitles.length; i++) {
+      ActionBar.Tab tab = mActionBar.newTab();
+      tab.setText(mTabTitles[i]);
+      tab.setTabListener(this);
+      mActionBar.addTab(tab, i);
     }
-    transaction.commit();
+
+
+    //将Fragment加入到List中，并将Tab的title传递给Fragment
+//    for (int i = 0; i < mTabTitles.length; i++) {
+////      Fragment fragment = new Fragment();
+////      Bundle args = new Bundle();
+////      args.putString("arg", mTabTitles[i]);
+////      fragment.setArguments(args);
+//
+//      mFragmentList.add(fragments);
+//      mViewPager.getAdapter().notifyDataSetChanged();
+//    }
   }
 
   @Override
@@ -113,64 +161,64 @@ public class MainActivity extends SherlockFragmentActivity {
   }
 
   private void setupNavigationDrawer() {
-    DRAWER_ITEMS = new NavigationDrawerItem[]{
-      NavigationMenuItem.create(NavigationDrawerItemConstants.NOTES_ID, NavigationDrawerItemConstants.NOTES_NAME, "ic_drawer_note", true, true, this),
-      NavigationMenuItem.create(NavigationDrawerItemConstants.CALENDAR_ID, NavigationDrawerItemConstants.CALENDAR_NAME, "ic_drawer_calendar", true, true, this),
-      NavigationMenuItem.create(NavigationDrawerItemConstants.TRASH_ID, NavigationDrawerItemConstants.TRASH_NAME, "ic_drawer_trash", true, true, this),
-      NavigationMenuItem.create(NavigationDrawerItemConstants.SETTINGS_ID, NavigationDrawerItemConstants.SETTINGS_NAME, "ic_drawer_settings", true, true, this),
-    };
+//    DRAWER_ITEMS = new NavigationDrawerItem[]{
+//      NavigationMenuItem.create(NavigationDrawerItemConstants.NOTES_ID, NavigationDrawerItemConstants.NOTES_NAME, "ic_drawer_note", true, true, this),
+//      NavigationMenuItem.create(NavigationDrawerItemConstants.CALENDAR_ID, NavigationDrawerItemConstants.CALENDAR_NAME, "ic_drawer_calendar", true, true, this),
+//      NavigationMenuItem.create(NavigationDrawerItemConstants.TRASH_ID, NavigationDrawerItemConstants.TRASH_NAME, "ic_drawer_trash", true, true, this),
+//      NavigationMenuItem.create(NavigationDrawerItemConstants.SETTINGS_ID, NavigationDrawerItemConstants.SETTINGS_NAME, "ic_drawer_settings", true, true, this),
+//    };
+//
+//    title = drawerTitle = getTitle();
+//
+//    drawerLayout = (DrawerLayout) findViewById(R.id.main_$_drawer_layout);
+//    drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+//    drawerLayout.setFocusableInTouchMode(false);
 
-    title = drawerTitle = getTitle();
+    //drawerContainer = (LinearLayout) findViewById(R.id.main_$_linearlayout_container);
 
-    drawerLayout = (DrawerLayout) findViewById(R.id.main_$_drawer_layout);
-    drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-    drawerLayout.setFocusableInTouchMode(false);
-
-    drawerContainer = (LinearLayout) findViewById(R.id.main_$_linearlayout_container);
-
-    drawerList = (ListView) findViewById(R.id.main_$_listview_items);
-    drawerList.setAdapter(new NavigationDrawerAdapter(this, R.layout.navdrawer_item, DRAWER_ITEMS));
-    drawerList.setOnItemClickListener(new DrawerItemClickListener());
-    drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.drawable.ic_drawer, R.string.drawer_open, R.string.drawer_close) {
-      public void onDrawerClosed(View view) {
-        getSupportActionBar().setTitle(title);
-        invalidateOptionsMenu();
-      }
-
-      public void onDrawerOpened(View drawerView) {
-        getSupportActionBar().setTitle(drawerTitle);
-        invalidateOptionsMenu();
-      }
-    };
-    drawerLayout.setDrawerListener(drawerToggle);
-
-    photoImageView = (CircularImageView) findViewById(R.id.main_$_imageview_user);
-    if (AppPreferences.getUserPhotoFilePath() != null) {
-      displayPhoto(AppPreferences.getUserPhotoFilePath());
-    }
-
-    username = (TextView) findViewById(R.id.main_$_textview_username);
-    username.setText(AppPreferences.getUserName());
+//    drawerList = (ListView) findViewById(R.id.main_$_listview_items);
+//    drawerList.setAdapter(new NavigationDrawerAdapter(this, R.layout.navdrawer_item, DRAWER_ITEMS));
+//    drawerList.setOnItemClickListener(new DrawerItemClickListener());
+//    drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.drawable.ic_drawer, R.string.drawer_open, R.string.drawer_close) {
+//      public void onDrawerClosed(View view) {
+//        getSupportActionBar().setTitle(title);
+//        invalidateOptionsMenu();
+//      }
+//
+//      public void onDrawerOpened(View drawerView) {
+//        getSupportActionBar().setTitle(drawerTitle);
+//        invalidateOptionsMenu();
+//      }
+//    };
+//    drawerLayout.setDrawerListener(drawerToggle);
+//
+//    photoImageView = (CircularImageView) findViewById(R.id.main_$_imageview_user);
+//    if (AppPreferences.getUserPhotoFilePath() != null) {
+//      displayPhoto(AppPreferences.getUserPhotoFilePath());
+//    }
+//
+//    username = (TextView) findViewById(R.id.main_$_textview_username);
+//    username.setText(AppPreferences.getUserName());
   }
 
   private void displayPhoto(String path) {
-    try {
-      if (path.startsWith("https")) {
-        ImageLoader.getInstance().displayImage(path, photoImageView);
-      } else {
-        File file = new File(path);
-        int size = DeviceUtility.dpToPx(this, 48);
-        photoImageView.setImageBitmap(BitmapUtility.decodeBitmapFromFile(file, size, size));
-      }
-    } catch (Exception e) {
-      Logger.e("displayPhoto raise exception: " + e.getMessage());
-    }
+//    try {
+//      if (path.startsWith("https")) {
+//        ImageLoader.getInstance().displayImage(path, photoImageView);
+//      } else {
+//        File file = new File(path);
+//        int size = DeviceUtility.dpToPx(this, 48);
+//        photoImageView.setImageBitmap(BitmapUtility.decodeBitmapFromFile(file, size, size));
+//      }
+//    } catch (Exception e) {
+//      Logger.e("displayPhoto raise exception: " + e.getMessage());
+//    }
   }
 
   private void animateBackground() {
-    LinearLayout main = (LinearLayout) findViewById(R.id.main_$_linearlayout_animated_background);
-    Animation anim = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-    main.startAnimation(anim);
+//    LinearLayout main = (LinearLayout) findViewById(R.id.main_$_linearlayout_animated_background);
+//    Animation anim = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+//    main.startAnimation(anim);
   }
 
   private void setupActionBar() {
@@ -190,14 +238,14 @@ public class MainActivity extends SherlockFragmentActivity {
   @Override
   public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
     switch (item.getItemId()) {
-      case android.R.id.home: {
-        if (drawerLayout.isDrawerOpen(drawerContainer)) {
-          closeDrawer();
-        } else {
-          openDrawer();
-        }
-        break;
-      }
+//      case android.R.id.home: {
+//        if (drawerLayout.isDrawerOpen(drawerContainer)) {
+//          closeDrawer();
+//        } else {
+//          openDrawer();
+//        }
+//        break;
+//      }
     }
     return super.onOptionsItemSelected(item);
   }
@@ -206,34 +254,36 @@ public class MainActivity extends SherlockFragmentActivity {
   protected void onPostCreate(Bundle savedInstanceState) {
     super.onPostCreate(savedInstanceState);
     // Sync the toggle state after onRestoreInstanceState has occurred.
-    drawerToggle.syncState();
+    //drawerToggle.syncState();
   }
 
   @Override
   public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
     // Pass any configuration change to the drawer toggles
-    drawerToggle.onConfigurationChanged(newConfig);
+    //drawerToggle.onConfigurationChanged(newConfig);
   }
 
   private void openDrawer() {
-    username.setText(AppPreferences.getUserName());
-    drawerLayout.openDrawer(drawerContainer);
+    //username.setText(AppPreferences.getUserName());
+    //drawerLayout.openDrawer(drawerContainer);
   }
 
   private void closeDrawer() {
-    username.setText(AppPreferences.getUserName());
-    drawerLayout.closeDrawer(drawerContainer);
+    //username.setText(AppPreferences.getUserName());
+    //drawerLayout.closeDrawer(drawerContainer);
   }
 
   @Override
   public void onBackPressed() {
-    if (!drawerLayout.isDrawerOpen(drawerContainer)) {
-      openDrawer();
-    } else {
-      closeDrawer();
-      super.onBackPressed();
-    }
+//    if (!drawerLayout.isDrawerOpen(drawerContainer)) {
+//      openDrawer();
+//    } else {
+//      closeDrawer();
+//      super.onBackPressed();
+//    }
+    closeDrawer();
+    super.onBackPressed();
   }
 
   private void swapFragment(int i, int j) {
@@ -336,5 +386,60 @@ public class MainActivity extends SherlockFragmentActivity {
       supportInvalidateOptionsMenu();
       selectItem(position);
     }
+  }
+
+
+
+  /**
+   * 顶部Tab的title
+   */
+  private String[] mTabTitles;
+
+  /**
+   * ViewPager对象的引用
+   */
+  private ViewPager mViewPager;
+
+  /**
+   * 装载Fragment的容器，我们的每一个界面都是一个Fragment
+   */
+  private List<Fragment> mFragmentList;
+
+  /**
+   * ActionBar对象的引用
+   */
+  private ActionBar mActionBar;
+
+  @Override
+  public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+    //点击ActionBar Tab的时候切换不同的Fragment界面
+    mViewPager.setCurrentItem(tab.getPosition());
+  }
+
+  @Override
+  public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+  }
+
+  @Override
+  public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+  }
+
+
+  @Override
+  public void onPageScrollStateChanged(int arg0) {
+
+  }
+
+  @Override
+  public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+  }
+
+  @Override
+  public void onPageSelected(int arg0) {
+    //滑动ViewPager的时候设置相对应的ActionBar Tab被选中
+    mActionBar.setSelectedNavigationItem(arg0);
   }
 }

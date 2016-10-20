@@ -12,7 +12,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="24"
+        android:text="24"
             android:textSize="24sp"
             android:textColor="@color/purple_14"
             android:id="@+id/calendar_grid_item_$_textview_day"/>

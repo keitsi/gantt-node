@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/settings.xml",
-        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/layout/settings.xml"
-    },
-    {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/abs__activity_chooser_view.xml",
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/layout/abs__activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/settings.xml",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/layout/settings.xml"
     },
     {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/abs__action_bar_tab.xml",
@@ -20,12 +20,12 @@
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/layout/color_dropdown_item.xml"
     },
     {
-        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/abs__search_dropdown_item_icons_2line.xml",
-        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/layout/abs__search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/navdrawer_item.xml",
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/layout/navdrawer_item.xml"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/abs__search_dropdown_item_icons_2line.xml",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/layout/abs__search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/layout/abs__action_bar_title_item.xml",

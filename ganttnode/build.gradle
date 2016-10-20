@@ -26,9 +26,9 @@ android {
 }
 
 dependencies {
+    compile files('libs/universal-image-loader-1.9.2.jar')
     compile 'com.google.code.gson:gson:2.3'
     compile 'joda-time:joda-time:2.3'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.android.support:support-v4:22.2.0'
-    compile files('libs/universal-image-loader-1.9.2.jar')
 }

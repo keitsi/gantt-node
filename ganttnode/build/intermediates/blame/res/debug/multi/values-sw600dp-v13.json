@@ -1119,9 +1119,9 @@
                     "startLine": 156,
                     "startColumn": 4,
                     "startOffset": 8857,
-                    "endLine": 166,
+                    "endLine": 167,
                     "endColumn": 12,
-                    "endOffset": 9380
+                    "endOffset": 9429
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/styles.xml",
@@ -1129,20 +1129,20 @@
                         "startLine": 3,
                         "startColumn": 4,
                         "startOffset": 56,
-                        "endLine": 13,
+                        "endLine": 14,
                         "endColumn": 12,
-                        "endOffset": 579
+                        "endOffset": 628
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 167,
+                    "startLine": 168,
                     "startColumn": 4,
-                    "startOffset": 9385,
-                    "endLine": 170,
+                    "startOffset": 9434,
+                    "endLine": 171,
                     "endColumn": 12,
-                    "endOffset": 9580
+                    "endOffset": 9629
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/vpi__styles.xml",
@@ -1158,12 +1158,12 @@
             },
             {
                 "to": {
-                    "startLine": 171,
+                    "startLine": 172,
                     "startColumn": 4,
-                    "startOffset": 9585,
-                    "endLine": 174,
+                    "startOffset": 9634,
+                    "endLine": 175,
                     "endColumn": 12,
-                    "endOffset": 9833
+                    "endOffset": 9882
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/vpi__styles.xml",
@@ -1179,12 +1179,12 @@
             },
             {
                 "to": {
-                    "startLine": 175,
+                    "startLine": 176,
                     "startColumn": 4,
-                    "startOffset": 9838,
-                    "endLine": 176,
+                    "startOffset": 9887,
+                    "endLine": 177,
                     "endColumn": 12,
-                    "endOffset": 9872
+                    "endOffset": 9921
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/vpi__styles.xml",
@@ -1200,12 +1200,12 @@
             },
             {
                 "to": {
-                    "startLine": 177,
+                    "startLine": 178,
                     "startColumn": 4,
-                    "startOffset": 9877,
-                    "endLine": 180,
+                    "startOffset": 9926,
+                    "endLine": 181,
                     "endColumn": 12,
-                    "endOffset": 10062
+                    "endOffset": 10111
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/vpi__styles.xml",
@@ -1221,12 +1221,12 @@
             },
             {
                 "to": {
-                    "startLine": 181,
+                    "startLine": 182,
                     "startColumn": 4,
-                    "startOffset": 10067,
-                    "endLine": 191,
+                    "startOffset": 10116,
+                    "endLine": 192,
                     "endColumn": 12,
-                    "endOffset": 10664
+                    "endOffset": 10713
                 },
                 "from": {
                     "file": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/values-sw600dp/vpi__styles.xml",

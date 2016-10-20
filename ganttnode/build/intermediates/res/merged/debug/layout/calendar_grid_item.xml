@@ -14,6 +14,8 @@
             android:layout_height="wrap_content"
             android:text="24"
             android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:textColor="@color/purple_14"
             android:id="@+id/calendar_grid_item_$_textview_day"/>
 

@@ -284,12 +284,12 @@
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-xhdpi/abs__ic_clear_disabled.png"
     },
     {
-        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png",
-        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png"
-    },
-    {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png",
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png"
     },
     {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-xhdpi/abs__progress_bg_holo_light.9.png",

@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="9dc17d67bb9f124c7723fdabe567230c225c9e9f">
+        sha1="56491078a600d9dfe76d06638dc1954515d96f53">
         <dex dex="/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/pre-dexed/debug/instant-run-bootstrap_47e4ece9596d3be7d95b75aae60ccc86ed5bc596.jar" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="acb35c78490c5628e992849049e899ab5ebbd84f">
+        sha1="8db0353185ac1369a705767cbabe6f6c2299c8db">
         <dex dex="/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/pre-dexed/debug/instant-run_e5a26ef8a15389d17f6024859c2e29ea2a1867ac.jar" />
     </item>
     <item

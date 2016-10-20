@@ -18,10 +18,8 @@
     </style>
 
     <style name="Widget.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
-        <!--<item name="android:background">@color/white</item>-->
-        <!--<item name="android:showDividers">beginning</item>-->
-        <!--<item name="android:divider">@color/white</item>-->
-        <!--<item name="android:dividerHeight">10px</item>-->
+        <item name="android:background">@color/tab_transparent</item>
+        <item name="android:dividerHeight">0px</item>
 
         <!--<item name="android:titleTextStyle">@style/MyActionBarTitleText</item>-->
         <!--<item name="android:actionBarTabBarStyle">@style/MyActionBarTabBars</item>-->
@@ -46,7 +44,8 @@
     <!--</style>-->
 
     <style name="ReminderButton">
-        <item name="android:background">@drawable/calendar_purple_button</item>
+        <item name="android:background">@color/dark_green</item>
+        <item name="android:textColor">@color/light_grey</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="android:shadowColor">#000000</item>
@@ -59,8 +58,9 @@
 
     <style name="WeekDayTextView">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/purple_12</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <declare-styleable name="FlowLayout">

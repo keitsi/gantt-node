@@ -1,0 +1,32 @@
+package chan.android.app.pocketnote.app;
+
+/**
+ * Created by keitsi on 16-10-19.
+ */
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
+import java.util.List;
+
+public class TabPagerAdapter extends FragmentStatePagerAdapter {
+    private List<Fragment> list;
+
+    //构造函数
+    public TabPagerAdapter(FragmentManager fm, List<Fragment> list) {
+        super(fm);
+        this.list = list;
+    }
+
+    @Override
+    public Fragment getItem(int arg0) {
+        return list.get(arg0);
+    }
+
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+}

@@ -87,7 +87,7 @@ class CalendarItemAdapter extends BaseAdapter {
       if (isSunday(weekday)) {
         vh.day.setTextColor(COLOR_TEXT_SUNDAY);
       } else if (isSaturday(weekday)) {
-        vh.day.setTextColor(COLOR_TEXT_SATURDAY);
+        vh.day.setTextColor(COLOR_TEXT_SUNDAY);
       } else {
         vh.day.setTextColor(COLOR_TEXT_AVAILABLE);
       }
@@ -95,7 +95,8 @@ class CalendarItemAdapter extends BaseAdapter {
     }
 
     if (isToday(item.getDay(), item.getMonth(), item.getYear())) {
-      setViewBackground(context, vh.parent, R.drawable.calendar_item_today);
+//      setViewBackground(context, vh.parent, R.drawable.calendar_item_today);
+      setViewBackground(context, vh.parent, R.color.yellow_7);
     }
 
     vh.day.setText(Integer.toString(item.getDay()));
