@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aluminum2">
+    android:background="@color/aluminum1">
 
     <ViewFlipper
         android:id="@+id/calendar_$_viewflipper"
@@ -15,8 +15,8 @@
             android:id="@+id/calendar_$_linearlayout_parent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="100px"
-            android:background="@color/aluminum2"
+            android:layout_marginTop="40dp"
+            android:background="@color/aluminum1"
             android:orientation="vertical">
 
             <LinearLayout
@@ -27,6 +27,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_marginBottom="40dp"
                     android:layout_height="wrap_content">
 
                     <ImageView
@@ -36,6 +37,7 @@
                         android:layout_alignParentLeft="true"
                         android:background="@android:drawable/list_selector_background"
                         android:clickable="true"
+                        android:layout_marginLeft="40dp"
                         android:src="@drawable/ic_action_left" />
 
                     <ImageView
@@ -45,13 +47,15 @@
                         android:layout_alignParentRight="true"
                         android:background="@android:drawable/list_selector_background"
                         android:clickable="true"
+                        android:layout_marginRight="40dp"
                         android:src="@drawable/ic_action_right" />
 
                     <TextView
                         android:id="@+id/calendar_$_textview_month"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="August"
                         android:textAlignment="center"
@@ -159,32 +163,32 @@
                 android:orientation="horizontal"
                 android:weightSum="3">
 
-                <Button
-                    android:id="@+id/calendar_$_button_prev"
-                    style="@style/ReminderButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:layout_margin="2px"
-                    android:text="Previous" />
+                <!--<Button-->
+                    <!--android:id="@+id/calendar_$_button_prev"-->
+                    <!--style="@style/ReminderButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_margin="2px"-->
+                    <!--android:text="Previous" />-->
 
-                <Button
-                    android:id="@+id/calendar_$_button_jump"
-                    style="@style/ReminderButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:layout_margin="2px"
-                    android:text="Jump" />
+                <!--<Button-->
+                    <!--android:id="@+id/calendar_$_button_jump"-->
+                    <!--style="@style/ReminderButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_margin="2px"-->
+                    <!--android:text="Jump" />-->
 
-                <Button
-                    android:id="@+id/calendar_$_button_next"
-                    style="@style/ReminderButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:layout_margin="2px"
-                    android:text="Next" />
+                <!--<Button-->
+                    <!--android:id="@+id/calendar_$_button_next"-->
+                    <!--style="@style/ReminderButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_margin="2px"-->
+                    <!--android:text="Next" />-->
 
             </LinearLayout>
         </RelativeLayout>

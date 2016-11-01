@@ -252,12 +252,12 @@
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png"
     },
     {
-        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-hdpi/abs__ic_go.png",
-        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-hdpi/abs__ic_go.png"
-    },
-    {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_restore.png",
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable-hdpi/ic_action_restore.png"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-hdpi/abs__ic_go.png",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable-hdpi/abs__ic_go.png"
     },
     {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_reminder_dark.png",

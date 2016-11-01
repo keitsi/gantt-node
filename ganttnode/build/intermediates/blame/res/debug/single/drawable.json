@@ -32,12 +32,12 @@
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/drawable/abs__textfield_searchview_right_holo_light.xml"
     },
     {
-        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable/rectangle_rounded_bottoms.xml",
-        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable/rectangle_rounded_bottoms.xml"
-    },
-    {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable/rectangle_rounded_tops_bottoms_red_compact.xml",
         "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable/rectangle_rounded_tops_bottoms_red_compact.xml"
+    },
+    {
+        "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable/rectangle_rounded_bottoms.xml",
+        "source": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/src/main/res/drawable/rectangle_rounded_bottoms.xml"
     },
     {
         "merged": "/home/keitsi/AndroidStudioProjects/gantt-node/ganttnode/build/intermediates/res/merged/debug/drawable/rectangle_rounded_grey.xml",
