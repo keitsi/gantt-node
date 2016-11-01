@@ -5,3 +5,6 @@
 */build
 /.gradle
 /.idea
+
+#log file
+*/*.log
